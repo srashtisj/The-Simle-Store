@@ -1,26 +1,16 @@
-import { MaterialmoduleModule } from './module/materialmodule/materialmodule.module';
-import { BrowserModule } from '@angular/platform-browser';
+import { SharedmoduleModule } from './module/sharedmodule/sharedmodule/sharedmodule.module';
+import { TreatementModule } from './module/treatment/treatement/treatement.module';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DentalImplantsComponent } from './treatment/dental-implants/dental-implants.component';
-import { EnquirybuttonComponent } from './Enquiry/enquirybutton/enquirybutton.component';
+
+
+
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DentalImplantsComponent,
-    EnquirybuttonComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialmoduleModule
-  ],
+  declarations: [AppComponent,  ],
+  imports: [SharedmoduleModule, TreatementModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
