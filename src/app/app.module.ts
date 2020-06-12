@@ -4,6 +4,7 @@ import { TreatementModule } from './module/treatment/treatement/treatement.modul
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { TreatmentPageComponent } from './treatment/treatment-page/treatment-page.component';
 
 @NgModule({
   declarations: [AppComponent, AboutusComponent, ],

@@ -1,3 +1,4 @@
+import { TreatmentPageComponent } from './../../../treatment/treatment-page/treatment-page.component';
 import { RootcanalComponent } from './../../../treatment/rootcanal/rootcanal.component';
 import { PeriodonticsComponent } from './../../../treatment/periodontics/periodontics.component';
 import { PediatricdentistryComponent } from './../../../treatment/pediatricdentistry/pediatricdentistry.component';
@@ -42,6 +43,7 @@ import { CommonModule } from '@angular/common';
     PediatricdentistryComponent,
     PeriodonticsComponent,
     RootcanalComponent,
+    TreatmentPageComponent,
   ],
   imports: [CommonModule, SharedmoduleModule, MaterialmoduleModule],
 })

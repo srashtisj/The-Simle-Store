@@ -1,3 +1,4 @@
+import { TreatmentPageComponent } from './treatment/treatment-page/treatment-page.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { RootcanalComponent } from './treatment/rootcanal/rootcanal.component';
 import { PeriodonticsComponent } from './treatment/periodontics/periodontics.component';
@@ -21,6 +22,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   //Treatment
   //Dental Implants
+  {path:'TreatmentPage',component:TreatmentPageComponent},
   { path: 'DentalImplants', component: DentalImplantsComponent },
   { path: 'CosmeticDentistry', component: CosmeticDentistryComponent },
   {path: 'FullMouthRehabilitation',component: FullMouthRehabilitationComponent,},
@@ -38,7 +40,8 @@ const routes: Routes = [
   { path: 'Periodontics', component: PeriodonticsComponent },
   { path: 'Rootcanal', component: RootcanalComponent },
   //aboutus
- {path:'aboutus',component:AboutusComponent}
+ {path:'aboutus',component:AboutusComponent},
+
 ];
 
 @NgModule({
