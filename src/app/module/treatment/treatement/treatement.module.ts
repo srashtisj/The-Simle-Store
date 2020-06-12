@@ -1,3 +1,13 @@
+import { RootcanalComponent } from './../../../treatment/rootcanal/rootcanal.component';
+import { PeriodonticsComponent } from './../../../treatment/periodontics/periodontics.component';
+import { PediatricdentistryComponent } from './../../../treatment/pediatricdentistry/pediatricdentistry.component';
+import { PatienteducationComponent } from './../../../treatment/patienteducation/patienteducation.component';
+import { OrthodonticsComponent } from './../../../treatment/orthodontics/orthodontics.component';
+import { ImpactedteethComponent } from './../../../treatment/impactedteeth/impactedteeth.component';
+import { CrownandbridgesComponent } from './../../../treatment/crownandbridges/crownandbridges.component';
+import { DentaljewelleryComponent } from './../../../treatment/dentaljewellery/dentaljewellery.component';
+import { ToothWhiteningComponent } from './../../../treatment/tooth-whitening/tooth-whitening.component';
+import { LogoImageComponent } from './../../../logo-image/logo-image.component';
 import { ToothColouredFillingComponent } from './../../../treatment/tooth-coloured-filling/tooth-coloured-filling.component';
 import { SmileDesigningComponent } from './../../../treatment/smile-designing/smile-designing.component';
 import { PorcelainLaminateVeneersComponent } from './../../../treatment/porcelain-laminate-veneers/porcelain-laminate-veneers.component';
@@ -22,6 +32,16 @@ import { CommonModule } from '@angular/common';
     InvisalignComponent,
     SmileDesigningComponent,
     ToothColouredFillingComponent,
+    LogoImageComponent,
+    ToothWhiteningComponent,
+    DentaljewelleryComponent,
+    CrownandbridgesComponent,
+    ImpactedteethComponent,
+    PatienteducationComponent,
+    OrthodonticsComponent,
+    PediatricdentistryComponent,
+    PeriodonticsComponent,
+    RootcanalComponent,
   ],
   imports: [CommonModule, SharedmoduleModule, MaterialmoduleModule],
 })
