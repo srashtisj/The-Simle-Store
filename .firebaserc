@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "thesmilestore-d8649": {
+      "hosting": {
+        "thesimlestore": [
+          "thesmilestore-d8649"
+        ]
+      }
+    }
+  }
+}

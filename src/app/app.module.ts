@@ -1,15 +1,24 @@
+import { ContactService } from './service/contact/contact.service';
 import { MaterialmoduleModule } from './module/materialmodule/materialmodule.module';
 import { SharedmoduleModule } from './module/sharedmodule/sharedmodule/sharedmodule.module';
 import { TreatementModule } from './module/treatment/treatement/treatement.module';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { TreatmentPageComponent } from './treatment/treatment-page/treatment-page.component';
-
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { ContactusComponent } from './contactus/contactus.component';
 @NgModule({
-  declarations: [AppComponent, AboutusComponent, ],
-  imports: [SharedmoduleModule, TreatementModule,MaterialmoduleModule],
-  providers: [],
+  declarations: [AppComponent, AboutusComponent, ContactusComponent],
+  imports: [
+    SharedmoduleModule,
+    TreatementModule,
+    MaterialmoduleModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase),
+  ],
+  providers: [ContactService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

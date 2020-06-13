@@ -1,3 +1,4 @@
+import { ContactusComponent } from './contactus/contactus.component';
 import { TreatmentPageComponent } from './treatment/treatment-page/treatment-page.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { RootcanalComponent } from './treatment/rootcanal/rootcanal.component';
@@ -41,6 +42,8 @@ const routes: Routes = [
   { path: 'Rootcanal', component: RootcanalComponent },
   //aboutus
  {path:'aboutus',component:AboutusComponent},
+ //contactus
+ {path:'contactus',component:ContactusComponent}
 
 ];
 

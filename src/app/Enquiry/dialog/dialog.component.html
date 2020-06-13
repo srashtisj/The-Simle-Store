@@ -1,0 +1,65 @@
+<div  >
+  <h1 mat-dialog-title fxLayout fxLayoutAlign="center">Enquire Now</h1>
+  <div fxLayoutAlign="center">
+    <form (ngSubmit)="onclick(f)" #f="ngForm">
+      <mat-form-field class="dex">
+        <mat-label>Enter your name</mat-label><br />
+        <input
+          matInput
+          placeholder="Enter the name"
+          value=""
+          name="name"
+          ngModel
+          required
+        /> </mat-form-field
+      ><br />
+      <mat-form-field class="dex">
+        <mat-label>Enter Email</mat-label><br />
+        <input
+          matInput
+          placeholder="Enter the email"
+          type="email"
+          name="email"
+          ngModel
+          required
+        /> </mat-form-field
+      ><br />
+      <mat-form-field class="dex">
+        <mat-label>Enter Phone Number</mat-label><br />
+        <input
+          matInput
+          placeholder="Enter the Number"
+          type="number"
+          name="number"
+          ngModel
+          required
+        /> </mat-form-field
+      ><br />
+
+      <mat-form-field class="dex">
+        <mat-label>Enter Description</mat-label><br />
+        <textarea
+          matInput
+          placeholder="Enter the Enquire Description "
+          type="text"
+          name="Description"
+          ngModel
+          cols="3"
+          required rows="6"
+        ></textarea> </mat-form-field
+      ><br />
+      <mat-dialog-actions>
+        <button mat-raised-button [mat-dialog-close]="false">Back</button>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="f.invalid"
+          [mat-dialog-close]="true"
+        >
+          Enquire Now
+        </button>
+      </mat-dialog-actions>
+    </form>
+  </div>
+</div>

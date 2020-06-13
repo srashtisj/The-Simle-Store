@@ -1,3 +1,5 @@
+import { EnquriyService } from './../../../service/enquiry/enquriy.service';
+import { DialogComponent } from './../../../Enquiry/dialog/dialog.component';
 import { TreatmentPageComponent } from './../../../treatment/treatment-page/treatment-page.component';
 import { RootcanalComponent } from './../../../treatment/rootcanal/rootcanal.component';
 import { PeriodonticsComponent } from './../../../treatment/periodontics/periodontics.component';
@@ -44,7 +46,9 @@ import { CommonModule } from '@angular/common';
     PeriodonticsComponent,
     RootcanalComponent,
     TreatmentPageComponent,
+    DialogComponent,
   ],
   imports: [CommonModule, SharedmoduleModule, MaterialmoduleModule],
+  providers:[EnquriyService]
 })
 export class TreatementModule {}
