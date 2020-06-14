@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar >
   <div fxHide.gt-xs>
     <button mat-icon-button (click)="onToggleSidenav()">
       <mat-icon>menu</mat-icon>
@@ -7,6 +7,7 @@
 
   <div fxFlex fxLayout fxLayoutAlign="" fxHide.xs>
     <ul fxLayout class="navigationbar" fxLayoutGap="40px">
+
       <li *ngIf="!isAuth">
         <a
           style="
