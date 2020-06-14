@@ -11,7 +11,7 @@ export class ContactService {
 
   addcontact(con:Contact)
   {
-    this.db.collection('conatct').add(con).then((re)=>{
+    this.db.collection('contact').add(con).then((re)=>{
       console.log("success");
 
     }).catch((error)=>{
