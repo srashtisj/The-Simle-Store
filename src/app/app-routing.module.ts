@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { TreatmentPageComponent } from './treatment/treatment-page/treatment-page.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
@@ -21,6 +22,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
+  {path:'',component:HomeComponent},
+  //home
+  {path:'Home',component:HomeComponent},
   //Treatment
   //Dental Implants
   {path:'TreatmentPage',component:TreatmentPageComponent},

@@ -11,6 +11,11 @@ import { environment } from '../environments/environment';
 import { ContactusComponent } from './contactus/contactus.component';
 import { SidenavComponent } from './toolbar/sidenav/sidenav.component';
 import { HeaderComponent } from './toolbar/header/header.component';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { HomeComponent } from './home/home.component';
+import { GalleryComponent } from './imgslider/gallery/gallery.component';
+import { MobGalleryComponent } from './imgslider/mob-gallery/mob-gallery.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +23,10 @@ import { HeaderComponent } from './toolbar/header/header.component';
     ContactusComponent,
     SidenavComponent,
     HeaderComponent,
+    HomeComponent,
+    GalleryComponent,
+    MobGalleryComponent,
+    FooterComponent,
   ],
   imports: [
     SharedmoduleModule,
@@ -25,6 +34,7 @@ import { HeaderComponent } from './toolbar/header/header.component';
     MaterialmoduleModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
+    NgImageSliderModule,
   ],
   providers: [ContactService],
   bootstrap: [AppComponent],
