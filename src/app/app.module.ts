@@ -9,8 +9,16 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { ContactusComponent } from './contactus/contactus.component';
+import { SidenavComponent } from './toolbar/sidenav/sidenav.component';
+import { HeaderComponent } from './toolbar/header/header.component';
 @NgModule({
-  declarations: [AppComponent, AboutusComponent, ContactusComponent],
+  declarations: [
+    AppComponent,
+    AboutusComponent,
+    ContactusComponent,
+    SidenavComponent,
+    HeaderComponent,
+  ],
   imports: [
     SharedmoduleModule,
     TreatementModule,
