@@ -10,11 +10,11 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
-  aboutus(){
+  aboutus() {
     this.router.navigate(['/aboutus']);
   }
-  treatment(){
+  treatment() {
     this.router.navigate(['/TreatmentPage']);
-
   }
+
 }

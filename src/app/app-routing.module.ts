@@ -1,3 +1,4 @@
+import { AboutdeveloperComponent } from './aboutdeveloper/aboutdeveloper.component';
 import { HomeComponent } from './home/home.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { TreatmentPageComponent } from './treatment/treatment-page/treatment-page.component';
@@ -47,7 +48,9 @@ const routes: Routes = [
   //aboutus
  {path:'aboutus',component:AboutusComponent},
  //contactus
- {path:'contactus',component:ContactusComponent}
+ {path:'contactus',component:ContactusComponent},
+ //aboutdev
+ {path:'aboutdeveloper',component:AboutdeveloperComponent}
 
 ];
 

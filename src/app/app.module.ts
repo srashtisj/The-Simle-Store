@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './imgslider/gallery/gallery.component';
 import { MobGalleryComponent } from './imgslider/mob-gallery/mob-gallery.component';
 import { FooterComponent } from './footer/footer.component';
+import { AboutdeveloperComponent } from './aboutdeveloper/aboutdeveloper.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { FooterComponent } from './footer/footer.component';
     GalleryComponent,
     MobGalleryComponent,
     FooterComponent,
+    AboutdeveloperComponent,
   ],
   imports: [
     SharedmoduleModule,
