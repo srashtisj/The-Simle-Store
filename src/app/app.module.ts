@@ -17,6 +17,8 @@ import { GalleryComponent } from './imgslider/gallery/gallery.component';
 import { MobGalleryComponent } from './imgslider/mob-gallery/mob-gallery.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutdeveloperComponent } from './aboutdeveloper/aboutdeveloper.component';
+
+import { AngularFireAuthModule } from '@angular/fire/auth';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,7 @@ import { AboutdeveloperComponent } from './aboutdeveloper/aboutdeveloper.compone
     MobGalleryComponent,
     FooterComponent,
     AboutdeveloperComponent,
+
   ],
   imports: [
     SharedmoduleModule,
@@ -37,6 +40,7 @@ import { AboutdeveloperComponent } from './aboutdeveloper/aboutdeveloper.compone
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     NgImageSliderModule,
+    AngularFireAuthModule,
   ],
   providers: [ContactService],
   bootstrap: [AppComponent],

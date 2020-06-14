@@ -1,3 +1,4 @@
+
 import { AboutdeveloperComponent } from './aboutdeveloper/aboutdeveloper.component';
 import { HomeComponent } from './home/home.component';
 import { ContactusComponent } from './contactus/contactus.component';
@@ -18,6 +19,8 @@ const routes: Routes = [
   { path: 'contactus', component: ContactusComponent },
   //aboutdev
   { path: 'aboutdeveloper', component: AboutdeveloperComponent },
+  //Adminlogin
+
 ];
 
 @NgModule({

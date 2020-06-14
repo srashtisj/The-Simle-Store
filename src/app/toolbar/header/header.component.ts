@@ -1,4 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
+import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -10,9 +12,13 @@ export class HeaderComponent implements OnInit {
   @Output() sidenavToggle = new EventEmitter<void>();
   isAuth = false;
 
+
   onToggleSidenav() {
     this.sidenavToggle.emit();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
+
 }

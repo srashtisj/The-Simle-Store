@@ -1,4 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
+
+import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
 
 
 @Component({
@@ -13,8 +15,13 @@ export class SidenavComponent implements OnInit {
 
   isAuth = false;
 
+
   onclose() {
     this.closesidenav.emit();
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+
+  }
+
 }
