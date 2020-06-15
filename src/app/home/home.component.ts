@@ -16,5 +16,4 @@ export class HomeComponent implements OnInit {
   treatment() {
     this.router.navigate(['/TreatmentPage']);
   }
-
 }
