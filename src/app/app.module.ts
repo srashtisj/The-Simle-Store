@@ -19,6 +19,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutdeveloperComponent } from './aboutdeveloper/aboutdeveloper.component';
 
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { EnquirylistComponent } from './admin/enquirylist/enquirylist.component';
+import { ContactlistComponent } from './admin/contactlist/contactlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     MobGalleryComponent,
     FooterComponent,
     AboutdeveloperComponent,
+    EnquirylistComponent,
+    ContactlistComponent,
 
   ],
   imports: [

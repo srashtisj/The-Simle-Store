@@ -2,12 +2,14 @@ import { Enquiry } from './../../interface/enquiry/enquiry';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
 export class EnquriyService {
   constructor(private db: AngularFirestore) {}
 
+  enquirydata=new Subject<Enquiry[]>();
 
   Addenquiry(enquiry:Enquiry){
     this.db.collection('enquiry').add(enquiry).then((re)=>{
@@ -19,12 +21,11 @@ export class EnquriyService {
     });
   }
   getenquiry(){
-    return this.db.collection(`enquiry`).snapshotChanges().pipe(map((action)=>{
-      return action.map(re=>{
-        const data=re.payload.doc.data() as Enquiry
-        const id=re.payload.doc.id;
-        return {id,...data}
-      })
-    }))
+   this.db
+     .collection('enquiry')
+     .valueChanges()
+     .subscribe((re: Enquiry[]) => {
+       this.enquirydata.next(re);
+     });
   }
 }

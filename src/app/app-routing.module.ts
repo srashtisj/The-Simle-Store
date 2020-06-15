@@ -1,3 +1,5 @@
+import { ContactlistComponent } from './admin/contactlist/contactlist.component';
+import { EnquirylistComponent } from './admin/enquirylist/enquirylist.component';
 
 import { AboutdeveloperComponent } from './aboutdeveloper/aboutdeveloper.component';
 import { HomeComponent } from './home/home.component';
@@ -20,6 +22,8 @@ const routes: Routes = [
   //aboutdev
   { path: 'aboutdeveloper', component: AboutdeveloperComponent },
   //Adminlogin
+  {path:'enquirylist',component:EnquirylistComponent},
+  {path:'contactlist',component:ContactlistComponent}
 
 ];
 

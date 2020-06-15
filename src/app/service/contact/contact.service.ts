@@ -1,3 +1,4 @@
+import { Subject } from 'rxjs';
 import { Contact } from './../../interface/contact/contact';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Injectable } from '@angular/core';
@@ -8,6 +9,7 @@ import { Injectable } from '@angular/core';
 export class ContactService {
 
   constructor(private db:AngularFirestore) { }
+  contactlist=new Subject<Contact[]>();
 
   addcontact(con:Contact)
   {
@@ -17,6 +19,11 @@ export class ContactService {
     }).catch((error)=>{
       console.log(error.message);
 
+    });
+  }
+  getcotact(){
+    this.db.collection(`contact`).valueChanges().subscribe((re:Contact[])=>{
+        this.contactlist.next(re);
     });
   }
 }
