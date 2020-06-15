@@ -20,5 +20,6 @@ export class ContactusComponent implements OnInit {
       phone: f.value.ph,
       treatment: f.value.treatment,
     });
+
   }
 }

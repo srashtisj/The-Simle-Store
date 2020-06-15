@@ -1,3 +1,4 @@
+import { SncakbarService } from './../snackbar/sncakbar.service';
 import { Enquiry } from './../../interface/enquiry/enquiry';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
@@ -6,7 +7,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
   providedIn: 'root',
 })
 export class EnquriyService {
-  constructor(private db: AngularFirestore) {}
+  constructor(private db: AngularFirestore,private snack:SncakbarService) {}
 
   Addenquiry(enquiry: Enquiry) {
     this.db
@@ -14,6 +15,7 @@ export class EnquriyService {
       .add(enquiry)
       .then((re) => {
         console.log('success');
+        this.snack.getsnackbar('Enquiry Submitted We Will Get Back To Your Soon',null,4000)
       })
       .catch((error) => {
         console.log(error.message);

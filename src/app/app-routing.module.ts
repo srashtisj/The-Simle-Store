@@ -22,9 +22,8 @@ const routes: Routes = [
   //aboutdev
   { path: 'aboutdeveloper', component: AboutdeveloperComponent },
   //Adminlogin
-  {path:'enquirylist',component:EnquirylistComponent},
-  {path:'contactlist',component:ContactlistComponent}
-
+  { path: 'enquirylist', component: EnquirylistComponent },
+  { path: 'contactlist', component: ContactlistComponent },
 ];
 
 @NgModule({
