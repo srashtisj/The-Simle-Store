@@ -2,14 +2,11 @@ import { Enquiry } from './../../interface/enquiry/enquiry';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 
-import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
 export class EnquriyService {
   constructor(private db: AngularFirestore) {}
-
-  Enquirydata= new Subject<Enquiry[]>();
 
   Addenquiry(enquiry: Enquiry) {
     this.db
@@ -22,5 +19,4 @@ export class EnquriyService {
         console.log(error.message);
       });
   }
-
 }
