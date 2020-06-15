@@ -1,1 +1,30 @@
-Hello Enquiry List
+<div
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  style="font-family: cursive; font-size: 40px; padding: 40px;"
+>
+  Enquiry
+</div>
+<div fxLayoutAlign="center center" fxLayout="column">
+<mat-table [dataSource]="dataSource" matSort>
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>name</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.name }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>email</mat-header-cell>
+    <mat-cell *matCellDef="let element"><a href="mailto:{{element.email}}">{{ element.email }}</a></mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="mobile">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>mobile</mat-header-cell>
+    <mat-cell *matCellDef="let element"><a href="tel:{{element.mobile}}">{{ element.mobile }}</a></mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Description">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Description</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.Description }}</mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let rows; columns: displayedColumns"></mat-row>
+</mat-table>
+<mat-paginator [pageSize]="5" [pageSizeOptions]='[5,10,20]'></mat-paginator>
+</div>

@@ -1,6 +1,3 @@
-import { ContactService } from './../../service/contact/contact.service';
-import { Contact } from './../../interface/contact/contact';
-import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,13 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contactlist.component.scss'],
 })
 export class ContactlistComponent implements OnInit {
-  constructor(private conatct: ContactService) {}
-  datasource = new MatTableDataSource<Contact>();
-  displayedColumns = ['name', 'email', 'mobile', 'treatment'];
+  constructor() {}
 
-  ngOnInit(): void {
-    this.conatct.contactlist.subscribe((re: Contact[]) => {
-        this.datasource.data=re;
-    });
-  }
+  ngOnInit(): void {}
 }
