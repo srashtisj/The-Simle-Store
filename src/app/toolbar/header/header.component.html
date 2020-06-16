@@ -51,6 +51,22 @@
           >Contact Us</a
         >
       </li>
+      <li *ngIf="isAuth">
+        <a
+          style="
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+              serif;
+            font-size: x-large;
+          "
+          routerLink="/adminlist"
+          >Admin List</a
+        >
+      </li>
+      <li *ngIf="isAuth"><a  style="
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+              serif;
+            font-size: x-large; cursor: pointer;
+          " (click)="logout()">Logout</a></li>
     </ul>
   </div>
 </mat-toolbar>

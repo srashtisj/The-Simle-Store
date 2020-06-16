@@ -1,4 +1,9 @@
-import { Component, OnInit, AfterViewInit, AfterViewChecked } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  AfterViewChecked,
+} from '@angular/core';
 
 @Component({
   selector: 'app-aboutus',
@@ -7,7 +12,6 @@ import { Component, OnInit, AfterViewInit, AfterViewChecked } from '@angular/cor
 })
 export class AboutusComponent implements OnInit {
   constructor() {}
-
 
   ngOnInit(): void {}
 }

@@ -1,0 +1,20 @@
+<div style="font-family: cursive; font-size: 40px; padding: 40px;" fxLayoutAlign="center">
+  Login
+  </div>
+<div fxLayoutAlign="center" style="padding: 30px;">
+  <mat-card>
+    <mat-card-content>
+      <form (ngSubmit)="onsubmit(f)" #f="ngForm" fxLayout="column">
+        <mat-form-field>
+
+          <input matInput type="text" placeholder="Enter the username or email" required name="username" ngModel>
+        </mat-form-field>
+        <mat-form-field>
+
+          <input matInput type="text" placeholder="Enter the Password" required name="password" ngModel>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit"[disabled]="f.invalid"> Submit</button>
+        </form>
+    </mat-card-content>
+    </mat-card>
+  </div>

@@ -22,6 +22,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { EnquirylistComponent } from './admin/enquirylist/enquirylist.component';
 import { ContactlistComponent } from './admin/contactlist/contactlist.component';
 import { FetchlistComponent } from './admin/fetchlist/fetchlist.component';
+import { AdminloginportalComponent } from './adminloginportal/adminloginportal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { FetchlistComponent } from './admin/fetchlist/fetchlist.component';
     EnquirylistComponent,
     ContactlistComponent,
     FetchlistComponent,
+    AdminloginportalComponent,
 
   ],
   imports: [
@@ -47,6 +49,7 @@ import { FetchlistComponent } from './admin/fetchlist/fetchlist.component';
     AngularFireModule.initializeApp(environment.firebase),
     NgImageSliderModule,
     AngularFireAuthModule,
+    AngularFireAuthModule
   ],
   providers: [ContactService],
   bootstrap: [AppComponent],

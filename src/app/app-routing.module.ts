@@ -1,3 +1,5 @@
+import { AdmingardGuard } from './guard/admin/admin/admingard.guard';
+import { AdminloginportalComponent } from './adminloginportal/adminloginportal.component';
 import { FetchlistComponent } from './admin/fetchlist/fetchlist.component';
 import { ContactlistComponent } from './admin/contactlist/contactlist.component';
 import { EnquirylistComponent } from './admin/enquirylist/enquirylist.component';
@@ -23,11 +25,15 @@ const routes: Routes = [
   //aboutdev
   { path: 'aboutdeveloper', component: AboutdeveloperComponent },
   //Adminlogin
-   {path:'adminlist',component:FetchlistComponent}
+   {path:'adminlist',component:FetchlistComponent,canActivate:[AdmingardGuard]},
+   {path:'adminloginportal',component:AdminloginportalComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes)
+    ],
   exports: [RouterModule],
+  providers:[AdmingardGuard]
 })
 export class AppRoutingModule {}

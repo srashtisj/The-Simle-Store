@@ -1,3 +1,4 @@
+import { AuthmainService } from './../../service/auth/authmain.service';
 
 import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
@@ -7,18 +8,26 @@ import { Subscription } from 'rxjs';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
-  constructor() {}
+export class HeaderComponent implements OnInit, OnDestroy {
+  constructor(private authmain: AuthmainService) {}
+
   @Output() sidenavToggle = new EventEmitter<void>();
   isAuth = false;
-
+  authsub: Subscription;
 
   onToggleSidenav() {
     this.sidenavToggle.emit();
   }
 
   ngOnInit(): void {
-
+    this.authsub = this.authmain.authchanged.subscribe((authstate) => {
+      this.isAuth = authstate;
+    });
   }
-
+  ngOnDestroy(): void {
+    this.authsub.unsubscribe();
+  }
+  logout(){
+    this.authmain.logout();
+  }
 }

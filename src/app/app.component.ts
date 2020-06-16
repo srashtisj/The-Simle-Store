@@ -1,7 +1,4 @@
-import { Router } from '@angular/router';
-
 import { Component, OnInit } from '@angular/core';
-
 
 @Component({
   selector: 'app-root',
@@ -10,6 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   panelOpenState = false;
-  constructor(private router: Router) {}
+  constructor() {}
   ngOnInit(): void {}
 }
