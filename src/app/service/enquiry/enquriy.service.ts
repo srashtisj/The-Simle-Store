@@ -3,14 +3,15 @@ import { SncakbarService } from './../snackbar/sncakbar.service';
 import { Enquiry } from './../../interface/enquiry/enquiry';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { database } from 'firebase';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EnquriyService {
-  constructor(private db: AngularFirestore,private snack:SncakbarService) {}
+  constructor(private db: AngularFirestore, private snack: SncakbarService) {}
 
-  EnquiryFilled=new Subject<Enquiry[]>();
+  EnquiryFilled = new Subject<Enquiry[]>();
 
   Addenquiry(enquiry: Enquiry) {
     this.db
@@ -18,16 +19,23 @@ export class EnquriyService {
       .add(enquiry)
       .then((re) => {
         console.log('success');
-        this.snack.getsnackbar('Enquiry Submitted We Will Get Back To Your Soon',null,4000)
+        this.snack.getsnackbar(
+          'Enquiry Submitted We Will Get Back To Your Soon',
+          null,
+          4000
+        );
       })
       .catch((error) => {
         console.log(error.message);
       });
   }
 
-  getenquiry(){
-    this.db.collection('enquiry').valueChanges().subscribe((re:Enquiry[])=>{
-      this.EnquiryFilled.next(re);
-    })
+  getenquiry() {
+    this.db
+      .collection('enquiry')
+      .valueChanges()
+      .subscribe((re: Enquiry[]) => {
+        this.EnquiryFilled.next(re);
+      });
   }
 }

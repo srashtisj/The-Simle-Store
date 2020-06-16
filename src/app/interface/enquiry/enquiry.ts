@@ -4,4 +4,5 @@ export interface Enquiry {
   email: string;
   mobile: number;
   Description:string;
+  Date?:Date;
 }
