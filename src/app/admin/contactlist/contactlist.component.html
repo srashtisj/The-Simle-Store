@@ -1,1 +1,23 @@
-Contact us worked
+<div style="font-family: cursive; font-size: 40px; padding: 40px;" fxLayoutAlign="center">Contact List</div>
+<div fxLayoutAlign="center" style="padding: 30px;">
+<mat-table [dataSource]="datasource">
+   <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef >name</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.name }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef >email</mat-header-cell>
+    <mat-cell *matCellDef="let element"><a href="mailto:{{element.email}}">{{ element.email }}</a></mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="phone">
+    <mat-header-cell *matHeaderCellDef >phone</mat-header-cell>
+    <mat-cell *matCellDef="let element"><a href="tel:{{element.phone}}">{{ element.phone }}</a></mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="treatment">
+    <mat-header-cell *matHeaderCellDef >treatment</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.treatment }}</mat-cell>
+  </ng-container>
+   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let rows; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>

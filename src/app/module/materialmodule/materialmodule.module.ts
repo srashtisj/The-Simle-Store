@@ -16,7 +16,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatSortModule } from '@angular/material/sort';
-
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 @NgModule({
@@ -39,6 +39,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatListModule,
     FlexLayoutModule,
     MatSortModule,
+    MatTabsModule,
   ],
   exports: [
     MatButtonModule,
@@ -57,6 +58,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatListModule,
     FlexLayoutModule,
     MatSortModule,
+    MatTabsModule,
   ],
 })
 export class MaterialmoduleModule {}

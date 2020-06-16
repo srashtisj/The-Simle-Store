@@ -1,3 +1,4 @@
+import { FetchlistComponent } from './admin/fetchlist/fetchlist.component';
 import { ContactlistComponent } from './admin/contactlist/contactlist.component';
 import { EnquirylistComponent } from './admin/enquirylist/enquirylist.component';
 
@@ -22,8 +23,7 @@ const routes: Routes = [
   //aboutdev
   { path: 'aboutdeveloper', component: AboutdeveloperComponent },
   //Adminlogin
-  { path: 'enquirylist', component: EnquirylistComponent },
-  { path: 'contactlist', component: ContactlistComponent },
+   {path:'adminlist',component:FetchlistComponent}
 ];
 
 @NgModule({

@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { ContactService } from './../../service/contact/contact.service';
+import { Contact } from './../../interface/contact/contact';
+import { MatTableDataSource } from '@angular/material/table';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-contactlist',
@@ -6,7 +10,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contactlist.component.scss'],
 })
 export class ContactlistComponent implements OnInit {
-  constructor() {}
+  constructor(private contact: ContactService) {}
 
-  ngOnInit(): void {}
+
+  ngOnInit(): void {
+    this.contact.getcotact();
+    this.contact.contactlist.subscribe((re: Contact[]) => {
+      this.datasource.data = re;
+    });
+  }
+  displayedColumns = ['name', 'email', 'phone', 'treatment'];
+  datasource = new MatTableDataSource<Contact>();
 }

@@ -21,6 +21,7 @@ import { AboutdeveloperComponent } from './aboutdeveloper/aboutdeveloper.compone
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { EnquirylistComponent } from './admin/enquirylist/enquirylist.component';
 import { ContactlistComponent } from './admin/contactlist/contactlist.component';
+import { FetchlistComponent } from './admin/fetchlist/fetchlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { ContactlistComponent } from './admin/contactlist/contactlist.component'
     AboutdeveloperComponent,
     EnquirylistComponent,
     ContactlistComponent,
+    FetchlistComponent,
 
   ],
   imports: [
