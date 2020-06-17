@@ -23,6 +23,7 @@ import { EnquirylistComponent } from './admin/enquirylist/enquirylist.component'
 import { ContactlistComponent } from './admin/contactlist/contactlist.component';
 import { FetchlistComponent } from './admin/fetchlist/fetchlist.component';
 import { AdminloginportalComponent } from './adminloginportal/adminloginportal.component';
+import { PatiententryComponent } from './patient/patiententry/patiententry.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,7 @@ import { AdminloginportalComponent } from './adminloginportal/adminloginportal.c
     ContactlistComponent,
     FetchlistComponent,
     AdminloginportalComponent,
+    PatiententryComponent,
 
   ],
   imports: [

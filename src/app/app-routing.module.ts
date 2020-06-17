@@ -1,3 +1,4 @@
+import { PatiententryComponent } from './patient/patiententry/patiententry.component';
 import { AdmingardGuard } from './guard/admin/admin/admingard.guard';
 import { AdminloginportalComponent } from './adminloginportal/adminloginportal.component';
 import { FetchlistComponent } from './admin/fetchlist/fetchlist.component';
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'aboutdeveloper', component: AboutdeveloperComponent },
   //Adminlogin
    {path:'adminlist',component:FetchlistComponent,canActivate:[AdmingardGuard]},
-   {path:'adminloginportal',component:AdminloginportalComponent}
+   {path:'adminloginportal',component:AdminloginportalComponent},
+   {path:'patientdetail',component:PatiententryComponent}
 ];
 
 @NgModule({
